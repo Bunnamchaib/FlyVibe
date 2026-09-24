@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>VOICE ROOM</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="joinPanel" class="panel">
+      <p class="eyebrow">LOCAL VOICE</p>
+      <h1>Join Voice Room</h1>
+      <p id="inviteStatus" class="status muted">Checking invitation...</p>
+      <label for="displayName">Your name</label>
+      <input id="displayName" autocomplete="name" maxlength="40" placeholder="OHM">
+      <button id="joinButton" class="primary">JOIN ROOM</button>
+      <p id="joinError" class="error"></p>
+    </section>
+
+    <section id="roomPanel" class="panel hidden">
+      <header class="roomHeader">
+        <div>
+          <p class="eyebrow">VOICE ROOM</p>
+          <h1 id="roomTitle">Room</h1>
+        </div>
+        <span id="connectionStatus" class="pill">Connecting</span>
+      </header>
+      <div class="participants">
+        <h2>Participants</h2>
+        <ul id="participantList"></ul>
+      </div>
+      <div class="controls">
+        <button id="muteButton" class="mic">MIC ON</button>
+        <button id="speakerButton">REMOTE AUDIO ON</button>
+        <button id="leaveButton" class="secondary">Leave</button>
+      </div>
+      <p id="roomError" class="error"></p>
+      <div id="remoteAudio"></div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
+
