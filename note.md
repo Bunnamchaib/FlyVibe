@@ -86,3 +86,18 @@
 - ถ้า WebRTC media fail ให้เพิ่ม TURN server ใน config
 - ก่อนแก้ครั้งต่อไปให้รัน `python .\backup.py` ก่อนเสมอ
 - เมื่อพร้อม push ให้ commit เฉพาะ source/docs/tests ไม่รวม `backup`, `build`, `dist`, `cloudflared.exe`
+
+## 2026-09-24 15:40 (+07:00) - รอบสี่: Commit และ Push
+
+### ทำอะไรไปแล้ว
+- รัน `backup.py` ก่อนแก้ note
+- Commit งานหลักแล้ว: `2f68490 feat: build local voice server`
+- Push เข้า repo `https://github.com/Bunnamchaib/FlyVibe.git` branch `main` สำเร็จ
+
+### ปัญหา/ข้อควรระวัง
+- ไฟล์ release ใน `dist` อยู่ในเครื่อง แต่ไม่ได้ push เพราะถูก ignore
+- `cloudflared.exe` อยู่ในเครื่องและใน `dist\VoiceServer` แต่ไม่ได้ push เพราะไฟล์ใหญ่และถูก ignore
+
+### จะทำอะไรต่อ
+- ทดสอบจริงจาก `dist\VoiceServer\VoiceServer.exe` กับมือถือ 2 เครื่อง
+- ถ้าทดสอบผ่านจริง ค่อย tag/release หรือแนบ zip release ภายหลัง
